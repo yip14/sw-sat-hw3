@@ -2,7 +2,7 @@ mkdir hw3
 cd hw3
 cp /home/yip14/hw1/twocities.txt .
 grep -o "Manette" twocities.txt | wc -l
-grep -oE "\b[a-zA-Z]{10}\b" twocities.txt | head -n 20 | sort -f > twocities_ten_letters.txt
+grep -oE "\b[a-zA-Z]{10}\b" twocities.txt | head -n 20 | sort -f -k1,1r > twocities_ten_letters.txt
 sort -f twocities_ten_letters.txt | uniq -i
 grep -oE "\b[a-zA-Z]{10}\b" twocities.txt | sort -f | uniq -i | head -n 20 > twocities_unique_ten_letters.txt
 head -n 1 twocities_unique_ten_letters.txt
